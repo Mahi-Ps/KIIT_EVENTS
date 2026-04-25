@@ -1,0 +1,361 @@
+/* ===== Admin / Faculty Dashboard — Green + Dark Theme ===== */
+
+.adm-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a0f0d 0%, #0d1a14 40%, #111d17 100%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #e4efe8;
+}
+
+/* ---------- Navbar ---------- */
+.adm-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 36px;
+  background: rgba(16, 185, 129, 0.04);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.adm-nav-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.adm-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.adm-role-badge {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.adm-nav-user {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.adm-logout-btn {
+  padding: 7px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.adm-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- Main ---------- */
+.adm-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+}
+
+.adm-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.adm-header p {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ---------- Stats ---------- */
+.adm-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 28px 0 24px;
+}
+
+.adm-stat-card {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 16px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.25s;
+}
+
+.adm-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.adm-stat-num {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adm-stat-green {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adm-stat-yellow {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adm-stat-red {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adm-stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ---------- Filter Tabs ---------- */
+.adm-filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.adm-filter-btn {
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.adm-filter-btn.active {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.adm-filter-btn:hover:not(.active) {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Events List ---------- */
+.adm-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adm-event-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.2s;
+}
+
+.adm-event-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  transform: translateY(-2px);
+}
+
+.adm-event-image {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.adm-event-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.adm-event-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+}
+
+.adm-event-info {
+  flex: 1;
+}
+
+.adm-event-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.adm-cat-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.adm-status-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.adm-event-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.adm-event-meta {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 8px;
+}
+
+.adm-event-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.adm-event-reg-count {
+  font-size: 12px;
+  color: rgba(16, 185, 129, 0.7);
+  margin: 8px 0 0;
+}
+
+/* ---------- Action Buttons ---------- */
+.adm-event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.adm-approve-btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.adm-approve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+}
+
+.adm-reject-btn {
+  padding: 10px 22px;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.adm-reject-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.adm-done-label {
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.adm-rejected-label {
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.adm-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .adm-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .adm-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adm-event-top {
+    flex-direction: column;
+  }
+
+  .adm-event-actions {
+    flex-direction: row;
+  }
+}
